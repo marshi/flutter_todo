@@ -22,11 +22,12 @@ class TaskAddPage extends HookWidget {
             children: [
               TextFormField(
                 decoration: InputDecoration(labelText: "task"),
-                onSaved: (newValue) => _task.task = newValue,
+                onSaved: (newValue) => _task = _task.copyWith(task: newValue),
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: "description"),
-                onSaved: (newValue) => _task.description = newValue,
+                onSaved: (newValue) =>
+                    _task = _task.copyWith(description: newValue),
               ),
               RaisedButton(
                 child: Text("submit"),
