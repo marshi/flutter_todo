@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo/routes.dart';
+import 'package:hooks_riverpod/all.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
